@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Button from "./components/Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const goToSection = (sectionId) => () => {
+		const section = document.getElementById(sectionId);
+		if (section) {
+			section.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+	return (
+		<>
+			<main>
+				<Button />
+				<section id="section1" className="site-section section1">
+					1
+				</section>
+				<section id="section2" className="site-section section2">
+					2
+				</section>
+				<section id="section3" className="site-section section3">
+					3
+				</section>
+			</main>
+		</>
+	);
 }
 
 export default App;
