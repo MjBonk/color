@@ -12,14 +12,14 @@ code {
     monospace;
 }
 
-:root{
+:root {
   --clr-accent: black;
   --clr-primary: white;
+  --ff-rubic: "Rubik Mono One", monospace;
 }
 
 * {
   box-sizing: border-box;
-  color: var(--clr-accent)
 }
 
 body {
@@ -36,6 +36,11 @@ p {
   margin: 0;
 }
 
+h1 {
+  font-size: 7rem;
+  font-family: var(--ff-rubic);
+}
+
 a {
   text-decoration: none;
 }
@@ -48,10 +53,9 @@ ul {
 }
 
 
-button{
+button {
   padding: 1rem;
   border-radius: 50rem;
-  width: 7rem;
   font-weight: bold;
   font-size: 1.5rem;
   background-color: var(--clr-primary);

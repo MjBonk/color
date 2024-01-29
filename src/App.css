@@ -1,26 +1,24 @@
-.site-section{
+.site-section {
 	height: 100vh;
 }
 
-.section1{
-	background-color: aquamarine;
-}
-.section2{
-	background-color: blueviolet;
-}
-.section3{
-	background-color: salmon;
+.section1 {
+	background-color: var(--clr-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-main{
-	position: absolute;
-	width: 100vw;
-	height: 300vh;
+.section1>.text-wrapper {
+	width: 70%;
 }
-.main-button{
-	position: fixed;
-	bottom: 2rem;
-	left: 50%; 
-	transform: translate(-50%, -50%);
+
+.section2 {
+	background-color: pink;
 }
+
+.section3 {
+	background-color: var(--clr-primary);
+}
+
 

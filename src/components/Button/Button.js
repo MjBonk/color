@@ -1,3 +1,5 @@
+import "./Button.css"
+
 function Button() {
 	function handleOnClick() {
 		const section1Position = document.getElementById("section1").getBoundingClientRect();
@@ -7,6 +9,7 @@ function Button() {
 		let scrollDistance = document.documentElement.clientHeight;
 
 		if (section1Position.top === 0) {
+			
 			console.log("page go to 2");
 			window.scrollBy(0, scrollDistance);
 
