@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --clr-accent: black;
   --clr-primary: white;
@@ -24,6 +28,7 @@ code {
 
 body {
   margin: 0;
+  overflow-y: hidden;
 }
 
 h1,
@@ -37,8 +42,9 @@ p {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
   font-family: var(--ff-rubic);
+  letter-spacing: -.5rem;
 }
 
 a {
@@ -54,7 +60,7 @@ ul {
 
 
 button {
-  padding: 1rem;
+  padding: .5rem 1rem;
   border-radius: 50rem;
   font-weight: bold;
   font-size: 1.5rem;

@@ -9,16 +9,16 @@
 	justify-content: center;
 }
 
+
 .section1>.text-wrapper {
 	width: 70%;
 }
 
 .section2 {
 	background-color: pink;
+	display: flex;
 }
 
 .section3 {
 	background-color: var(--clr-primary);
 }
-
-
