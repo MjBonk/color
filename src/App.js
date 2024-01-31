@@ -12,8 +12,7 @@ import useAPI from "./Hooks/useAPI";
 function App() {
 	// saying we want to use the varieble mixColors from context
 	const { mixColors, primaryColor, setPrimaryColor } = useContext(Context);
-	setPrimaryColor(chroma.mix(mixColors.one, mixColors.two).hex());
-	document.documentElement.style.setProperty("--clr-accent", primaryColor);
+
 
 	return (
 		<main>
@@ -40,7 +39,6 @@ function App() {
 			<section
 				id="section3"
 				className="site-section section3"
-				style={{ backgroundColor: primaryColor }}
 			>
 				3
 			</section>

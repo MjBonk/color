@@ -1,10 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../../ContextProvider";
+import chroma from "chroma-js";
 import "./Button.css";
 
 function Button() {
 	const [buttonText, setButtonText] = useState("START");
-	const { mixColors } = useContext(Context);
+	const { mixColors, primaryColor, setPrimaryColor } = useContext(Context);
+
+	useEffect(() => {
+		document.documentElement.style.setProperty("--clr-primary", primaryColor);
+	}, [primaryColor]);
 
 	function handleOnClick() {
 		const section1Position = document.getElementById("section1").getBoundingClientRect();
@@ -20,6 +25,11 @@ function Button() {
 
 			// go to page 3
 		} else if (section2Position.top === 0) {
+			// set primary color
+			setPrimaryColor(chroma.mix(mixColors.one, mixColors.two).hex());
+			// change css varieble
+
+			//scrolls + button text change
 			window.scrollBy(0, scrollDistance);
 			setButtonText("RESTART");
 
