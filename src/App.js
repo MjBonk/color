@@ -26,7 +26,7 @@ function App() {
 						control how much you get, place it within HTML structure as it expands,
 						and get different bits of it in repeated elements.
 					</p>
-					<CircleText />
+					{/* <CircleText /> */}
 				</div>
 			</section>
 			<section id="section2" className="site-section section2">
