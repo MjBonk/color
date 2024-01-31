@@ -5,11 +5,13 @@ import "./Button.css";
 
 function Button() {
 	const [buttonText, setButtonText] = useState("START");
-	const { mixColors, primaryColor, setPrimaryColor } = useContext(Context);
+	const { mixColors, setMixColors, primaryColor, setPrimaryColor, accentColor } = useContext(Context);
 
 	useEffect(() => {
 		document.documentElement.style.setProperty("--clr-primary", primaryColor);
 	}, [primaryColor]);
+
+	document.documentElement.style.setProperty("--clr-accent", accentColor);
 
 	function handleOnClick() {
 		const section1Position = document.getElementById("section1").getBoundingClientRect();
@@ -27,7 +29,6 @@ function Button() {
 		} else if (section2Position.top === 0) {
 			// set primary color
 			setPrimaryColor(chroma.mix(mixColors.one, mixColors.two).hex());
-			// change css varieble
 
 			//scrolls + button text change
 			window.scrollBy(0, scrollDistance);
@@ -37,6 +38,8 @@ function Button() {
 		} else if (section3Position.top === 0) {
 			window.scrollTo(0, 0);
 			setButtonText("START");
+			setPrimaryColor("#FFFFFF");
+			setMixColors({ one: "#000000", two: "#FFFFFF" });
 		}
 	}
 

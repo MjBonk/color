@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useGetComplementaryColor = ({ mixColor }) => {
+function useGetComplementaryColor(mixColor) {
 	const [complementaryColor, setComplementaryColor] = useState("#000000");
 
 	/* This step involves mapping over the RGB array and subtracting each
@@ -21,9 +21,9 @@ const useGetComplementaryColor = ({ mixColor }) => {
 		const complementaryHexColor = calculateComplementaryColor(mixColor);
 		setComplementaryColor(complementaryHexColor);
 	}, [mixColor]);
-	
-	return { mixColor, complementaryColor };
-};
+
+	return complementaryColor;
+}
 export default useGetComplementaryColor;
 
 // Use the new hook to get the complementary color
