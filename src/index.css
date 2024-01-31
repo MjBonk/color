@@ -39,6 +39,7 @@ h5,
 figure,
 p {
   margin: 0;
+  color: var(--clr-accent);
 }
 
 h1 {
@@ -66,4 +67,5 @@ button {
   font-size: 1.2rem;
   background-color: var(--clr-primary);
   border: solid 4px var(--clr-accent);
+  color: var(--clr-accent)
 }

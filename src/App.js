@@ -3,15 +3,17 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
+import chroma from "chroma-js";
+
 //import the context we created
 import { Context } from "./ContextProvider";
+import useAPI from "./Hooks/useAPI";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
-	const { mixColors } = useContext(Context);
-
-	
-
+	const { mixColors, primaryColor, setPrimaryColor } = useContext(Context);
+	setPrimaryColor(chroma.mix(mixColors.one, mixColors.two).hex());
+	document.documentElement.style.setProperty("--clr-accent", primaryColor);
 
 	return (
 		<main>
@@ -35,7 +37,11 @@ function App() {
 				<ColorBox color={mixColors.two} />
 			</section>
 
-			<section id="section3" className="site-section section3">
+			<section
+				id="section3"
+				className="site-section section3"
+				style={{ backgroundColor: primaryColor }}
+			>
 				3
 			</section>
 		</main>

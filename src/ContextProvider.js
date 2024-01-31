@@ -7,12 +7,15 @@ export const Context = createContext();
 function ContextProvider({ children }) {
 	// here we create our variebles/function etc that we want acces to everywhere
 	const [mixColors, setMixColors] = useState({ one: "#000000", two: "#FFFFFF" });
+	const [primaryColor, setPrimaryColor] = useState("#FFFFFF");
 
 	// here we put all the stuff if one varieble that we then pass as the value when returning the component,
 	// instead of making multible "Context.Provider"
 	const value = {
 		mixColors,
 		setMixColors,
+		primaryColor,
+		setPrimaryColor,
 	};
 
 	return <Context.Provider value={value}>{children}</Context.Provider>;
