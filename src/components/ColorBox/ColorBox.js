@@ -1,8 +1,10 @@
 import "./ColorBox.css";
-import { HuePicker } from "react-color";
+// AlphaPicker BlockPicker ChromePicker CirclePicker CompactPicker GithubPicker HuePicker MaterialPicker PhotoshopPicker SketchPicker SliderPicker SwatchesPicker TwitterPicker
+import { CirclePicker } from "react-color";
 import { useContext } from "react";
 // same as in app, importing our context 
 import { Context } from "../../ContextProvider";
+
 
 function ColorBox(props) {
 	// saying we want to use our setMixColors function and mixColors varieble from context
@@ -22,7 +24,7 @@ function ColorBox(props) {
 	return (
 		// prop.color default value white and black
 		<div className="color-box" style={{ backgroundColor: props.color }}>
-			<HuePicker className="color-box__picker" color={color} onChange={handleOnChange} />
+			<CirclePicker className="color-box__picker" color={color} onChange={handleOnChange} />
 		</div>
 	);
 }

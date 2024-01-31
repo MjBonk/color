@@ -9,9 +9,6 @@ function ContextProvider({ children }) {
 	const [mixColors, setMixColors] = useState({ one: "#000000", two: "#FFFFFF" });
 	const [primaryColor, setPrimaryColor] = useState("#FFFFFF");
 
-
-
-	
 	function useGetComplementaryColor(mixColor) {
 		const [complementaryColor, setComplementaryColor] = useState("#000000");
 		/* This step involves mapping over the RGB array and subtracting each
