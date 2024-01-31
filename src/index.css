@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -20,6 +20,8 @@ html{
   --clr-accent: black;
   --clr-primary: white;
   --ff-rubic: "Rubik Mono One", monospace;
+
+  --mq-sm: 480px
 }
 
 * {
@@ -40,13 +42,60 @@ figure,
 p {
   margin: 0;
   color: var(--clr-accent);
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 2.5rem;
   font-family: var(--ff-rubic);
-  letter-spacing: -.5rem;
 }
+
+/* Media queries for standard breakpoints */
+@media screen and (min-width: 36em) {
+  /* Small devices (phones) */
+  p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  h1 {
+    font-size: 2.75rem; /* 36px */
+  }
+}
+
+@media screen and (min-width: 48em) {
+  /* Medium devices (tablets) */
+  p {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  h1 {
+    font-size: 3rem; /* 40px */
+  }
+}
+
+@media screen and (min-width: 62em) {
+  /* Large devices (desktops) */
+  p {
+    font-size: 1.375rem; /* 22px */
+  }
+
+  h1 {
+    font-size: 3.25rem; /* 44px */
+  }
+}
+
+@media screen and (min-width: 75em) {
+  /* Extra-large devices (large desktops) */
+  p {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  h1 {
+    font-size: 3.5rem; /* 48px */
+  }
+}
+
+
 
 a {
   text-decoration: none;
