@@ -9,7 +9,6 @@
 	justify-content: center;
 }
 
-
 .section1>.text-wrapper {
 	width: 70%;
 }
@@ -17,6 +16,11 @@
 .section2 {
 	background-color: pink;
 	display: flex;
+}
+@media (max-width: 725px) {
+	.section2{
+		flex-direction: column;
+	}
 }
 
 .section3 {

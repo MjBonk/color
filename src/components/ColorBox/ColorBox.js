@@ -1,18 +1,28 @@
 import "./ColorBox.css";
 import { HuePicker } from "react-color";
-import { useState } from "react";
+import { useContext } from "react";
+// same as in app, importing our context 
+import { Context } from "../../ContextProvider";
 
-function ColorBox() {
-	const [colors, setColors] = useState("");
+function ColorBox(props) {
+	// saying we want to use our setMixColors function and mixColors varieble from context
+	const {  mixColors, setMixColors } = useContext(Context);
+
+	// api needs a color varieble so we just make one empty
+	const color = "";
+
 
 	function handleOnChange(color) {
-		setColors(color.hex);
+		props.color === mixColors.one
+			? setMixColors({ ...mixColors, one: color.hex })
+			: setMixColors({ ...mixColors, two: color.hex });
+			//  If prop.color === mixColors.one (default black) then change the one operator, else change the two 
 	}
 
 	return (
-		<div className="color-box">
-			<HuePicker color={colors} onChange={handleOnChange} />
-			{/* <SliderPicker /> */}
+		// prop.color default value white and black
+		<div className="color-box" style={{ backgroundColor: props.color }}>
+			<HuePicker className="color-box__picker" color={color} onChange={handleOnChange} />
 		</div>
 	);
 }

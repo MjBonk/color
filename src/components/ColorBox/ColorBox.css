@@ -1,8 +1,13 @@
 .color-box{
 	height: 100%;
 	width: 50%;
-	border: solid 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (max-width: 725px) {
+	.color-box{
+		width: 100%;
+	}
 }

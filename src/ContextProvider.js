@@ -1,15 +1,19 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-//"Note that we’re exporting Context because we’ll need it later to access the cursor context in other components."
+// We’re exporting Context because this is what we use to refrence when we want the access to
+// the values in here. ex const { mixColors } = useContext(Context) <----- in the brackets
 export const Context = createContext();
 
 function ContextProvider({ children }) {
-	//Then, we create a component named ContextProvider that returns the Provider component of the cursor context we
-	//just created. In React, the context Provider grants any of its children access to whatever is defined in its value prop.
-	// In our case, we pass a state variable cursor and the function that updates that variable setCursor. We set the initial
-	//state of cursor to be an object with a single property active, which we’ll use later to give our cursor an “active” style.
+	// here we create our variebles/function etc that we want acces to everywhere
+	const [mixColors, setMixColors] = useState({ one: "#000000", two: "#FFFFFF" });
 
-	const value = {};
+	// here we put all the stuff if one varieble that we then pass as the value when returning the component,
+	// instead of making multible "Context.Provider"
+	const value = {
+		mixColors,
+		setMixColors,
+	};
 
 	return <Context.Provider value={value}>{children}</Context.Provider>;
 }

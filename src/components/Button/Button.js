@@ -12,18 +12,17 @@ function Button() {
 
 		let scrollDistance = document.documentElement.clientHeight;
 		
-		// button text = START
-		// page go to 2
+		// go to page 2
 		if (section1Position.top === 0) {
 			window.scrollBy(0, scrollDistance);
 			setButtonText('MIX')
 
-			// page go to 3
+			// go to page 3
 		} else if (section2Position.top === 0) {
 			window.scrollBy(0, scrollDistance);
 			setButtonText('RESTART')
 
-			// page go to 1
+			// go to page 1
 		} else if (section3Position.top === 0) {
 			window.scrollTo(0, 0);
 			setButtonText('START')

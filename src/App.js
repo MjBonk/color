@@ -1,9 +1,18 @@
+import { useContext } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
+//import the context we created
+import { Context } from "./ContextProvider";
 
 function App() {
+	// saying we want to use the varieble mixColors from context
+	const { mixColors } = useContext(Context);
+
+	
+
+
 	return (
 		<main>
 			<Header />
@@ -21,8 +30,9 @@ function App() {
 				</div>
 			</section>
 			<section id="section2" className="site-section section2">
-				<ColorBox />
-				<ColorBox />
+				{/* pass mixColors as props to the colorBoxes */}
+				<ColorBox color={mixColors.one} />
+				<ColorBox color={mixColors.two} />
 			</section>
 
 			<section id="section3" className="site-section section3">

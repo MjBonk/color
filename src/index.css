@@ -63,7 +63,7 @@ button {
   padding: .5rem 1rem;
   border-radius: 50rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: var(--clr-primary);
-  border: solid 5px var(--clr-accent);
+  border: solid 4px var(--clr-accent);
 }
