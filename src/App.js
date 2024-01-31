@@ -3,16 +3,14 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
-import chroma from "chroma-js";
+import CircleText from "./components/CircleText/CircleText";
 
 //import the context we created
 import { Context } from "./ContextProvider";
-import useAPI from "./Hooks/useAPI";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
 	const { mixColors, primaryColor, setPrimaryColor } = useContext(Context);
-
 
 	return (
 		<main>
@@ -28,6 +26,7 @@ function App() {
 						control how much you get, place it within HTML structure as it expands,
 						and get different bits of it in repeated elements.
 					</p>
+					<CircleText />
 				</div>
 			</section>
 			<section id="section2" className="site-section section2">
@@ -36,10 +35,7 @@ function App() {
 				<ColorBox color={mixColors.two} />
 			</section>
 
-			<section
-				id="section3"
-				className="site-section section3"
-			>
+			<section id="section3" className="site-section section3">
 				3
 			</section>
 		</main>

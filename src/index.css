@@ -76,7 +76,7 @@ h1 {
 @media screen and (min-width: 62em) {
   /* Large devices (desktops) */
   p {
-    font-size: 1.375rem; /* 22px */
+    font-size: 1.3rem; /* 22px */
   }
 
   h1 {
@@ -85,13 +85,8 @@ h1 {
 }
 
 @media screen and (min-width: 75em) {
-  /* Extra-large devices (large desktops) */
-  p {
-    font-size: 1.5rem; /* 24px */
-  }
-
   h1 {
-    font-size: 3.5rem; /* 48px */
+    font-size: 4rem; /* 48px */
   }
 }
 
@@ -114,7 +109,7 @@ button {
   border-radius: 50rem;
   font-weight: bold;
   font-size: 1.2rem;
-  background-color: var(--clr-primary);
-  border: solid 4px var(--clr-accent);
-  color: var(--clr-accent)
+  background-color: var(--clr-accent);
+  border: solid 4px var(--clr-primary);
+  color: var(--clr-primary)
 }
