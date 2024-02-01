@@ -3,6 +3,7 @@
 }
 
 section{
+	transition: var(--transition);
 	background-color: var(--clr-primary);
 }
 

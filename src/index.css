@@ -20,7 +20,7 @@ html {
   --clr-accent: black;
   --clr-primary: white;
   --ff-rubic: "Rubik Mono One", monospace;
-
+  --transition: background-color 1s ease-in-out, color 1s ease-in-out;
   --mq-sm: 480px
 }
 
@@ -43,6 +43,7 @@ p {
   margin: 0;
   color: var(--clr-accent);
   font-size: 1rem;
+  transition: var(--transition);
 }
 
 h1 {
