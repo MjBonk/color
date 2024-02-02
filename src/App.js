@@ -9,6 +9,7 @@ import PlusSign from "./components/PlusSign/PlusSign";
 //import the context we created
 import { Context } from "./ContextProvider";
 import StarFlower from "./components/StarFlower/StarFlower";
+import Toggle from "./components/Toggle/Toggle";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
@@ -40,6 +41,8 @@ function App() {
 			<section id="section3" className="site-section section3">
 				{/* <StarFlower /> */}
 				<ParagraphAPI />
+				<Toggle BW={true}/>
+				<Toggle BW={false}/>
 			</section>
 		</main>
 	);
