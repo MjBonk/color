@@ -11,6 +11,7 @@ section {
 	background-color: var(--clr-primary);
 	display: flex;
 	align-items: center;
+	justify-content: space-around;
 	padding: 1rem;
 	gap: 3rem;
 }

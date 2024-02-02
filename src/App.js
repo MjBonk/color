@@ -3,15 +3,15 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
-import CircleText from "./components/CircleText/CircleText";
+import CircleText from "./components/graphic-elements/CircleText/CircleText";
 import ParagraphAPI from "./components/ParagraphAPI/ParagraphAPI";
-import PlusSign from "./components/PlusSign/PlusSign";
+import PlusSign from "./components/graphic-elements/PlusSign/PlusSign";
 //import the context we created
 import { Context } from "./ContextProvider";
-import StarFlower from "./components/StarFlower/StarFlower";
+import StarFlower from "./components/graphic-elements/StarFlower/StarFlower";
 import Toggle from "./components/Toggle/Toggle";
-import Domino from "./components/Domino/Domino";
-import StaggeringAnimation from "./components/StaggeringAnimation/StaggeringAnimation";
+import Domino from "./components/graphic-elements/Domino/Domino";
+import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimation/StaggeringAnimation";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
