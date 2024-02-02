@@ -1,0 +1,30 @@
+.staggering-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 600px;
+	height: 100%;
+	cursor: pointer;
+}
+
+.grid-square {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.small {
+	width: 20px;
+	height: 20px;
+}
+
+.square {
+	pointer-events: none;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin: 1px;
+	background-color: var(--clr-accent);
+	font-size: 14px;
+}

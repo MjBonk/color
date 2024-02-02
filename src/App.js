@@ -10,6 +10,8 @@ import PlusSign from "./components/PlusSign/PlusSign";
 import { Context } from "./ContextProvider";
 import StarFlower from "./components/StarFlower/StarFlower";
 import Toggle from "./components/Toggle/Toggle";
+import Domino from "./components/Domino/Domino";
+import StaggeringAnimation from "./components/StaggeringAnimation/StaggeringAnimation";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
@@ -40,9 +42,24 @@ function App() {
 
 			<section id="section3" className="site-section section3">
 				{/* <StarFlower /> */}
-				<ParagraphAPI />
-				<Toggle BW={true}/>
-				<Toggle BW={false}/>
+				<div className="marquee"></div>
+				<div className="box1"></div>
+				<div className="dividerNilas">
+					<Domino />
+				</div>
+				<div className="box2"></div>
+				<div className="title-toggles-textAI">
+					<h1>TITLE</h1>
+					<Toggle BW={true} />
+					<Toggle BW={false} />
+					<ParagraphAPI />
+				</div>
+				<div className="Circle"></div>
+				<div className="textinput"></div>
+				<div className="carmela">
+					<StaggeringAnimation />
+				</div>
+				<div className="bigword"></div>
 			</section>
 		</main>
 	);

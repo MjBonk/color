@@ -10,7 +10,6 @@ section {
 .section1 {
 	background-color: var(--clr-primary);
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 	padding: 1rem;
 	gap: 3rem;
@@ -26,7 +25,7 @@ section {
 }
 
 @media screen and (min-width: 36em) {
-	.section1__main-title{
+	.section1__main-title {
 		width: 100vw;
 	}
 }
@@ -47,7 +46,58 @@ section {
 
 .section3 {
 	background-color: var(--clr-primary);
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 40px repeat(11, 1fr);
+	grid-template-rows: repeat(11, 1fr);
+	gap: 1rem
+}
+
+.marquee {
+	grid-area: 2 / 1 / 13 / 2;
+	background-color: aquamarine;
+}
+
+.box1 {
+	grid-area: 2 / 2 / 6 / 6;
+	background-color: salmon;
+}
+
+.dividerNilas {
+	grid-area: 6 / 2 / 8 / 6;
+	background-color: firebrick;
+}
+
+.box2 {
+	background-color: blanchedalmond;
+	grid-area: 8 / 2 / 12 / 6;
+}
+
+.title-toggles-textAI {
+	grid-area: 2 / 6 / 6 / 10;
+	background-color: blue;
+	border-left: solid var(--clr-accent) 10px;
+}
+
+.Circle {
+	grid-area: 6 / 6 / 10 / 10;
+	background-color: var(--clr-accent);
+	width: 20vw;
+	height: 20vw;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.textinput {
+	grid-area: 3 / 10 / 8 / 13;
+	background-color: blueviolet;
+}
+
+.carmela {
+	grid-area: 8 / 10 / 10 / 13;
+	background-color: burlywood;
+}
+
+.bigword {
+	grid-area: 10 / 8 / 12 / 13;
+	background-color: pink;
 }
