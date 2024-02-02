@@ -26,15 +26,20 @@ function Button() {
 		const section1Position = document.getElementById("section1").getBoundingClientRect();
 		const section2Position = document.getElementById("section2").getBoundingClientRect();
 		const section3Position = document.getElementById("section3").getBoundingClientRect();
+		const header = document.querySelector(".header");
+		const scrollDistance = document.documentElement.clientHeight;
 
-		let header = document.querySelector(".header");
-		let scrollDistance = document.documentElement.clientHeight;
+		console.log(section1Position)
+
+
+
 
 		if (section1Position.top === 0) {
 			// go to page 2
 			window.scrollBy(0, scrollDistance);
 			setButtonText("MIX");
 			header.style.top = `-${header.getBoundingClientRect().height}px`;
+
 		} else if (section2Position.top === 0) {
 			// go to page 3
 			setPrimaryColor(chroma.mix(mixColors.one, mixColors.two).hex());
@@ -47,6 +52,7 @@ function Button() {
 			window.scrollTo(0, 0);
 			setButtonText("START");
 			setPrimaryColor("#FFFFFF");
+
 			const timeoutId = setTimeout(() => {
 				setMixColors({ one: "#000000", two: "#FFFFFF" });
 			}, 1000);

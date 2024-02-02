@@ -1,47 +1,42 @@
-function useAPI(question) {
-	const axios = require("axios");
-	const apiUrl = "https://api.openai.com/v1/chat/completions";
-	const apiKey = "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";
+// const axios = require("axios");
+import axios from "axios";
 
-	async function askQuestion(question) {
-		const conversation = [
-			{ role: "system", content: "You are a helpful assistant." },
-			{ role: "user", content: "Tell me about color sience." },
-		];
-		try {
-			const response = await axios.post(
-				apiUrl,
-				{
-					messages: conversation,
-					temperature: 0.7,
-					max_tokens: 150,
-					model: "gpt-3.5-turbo-0613",
+const apiUrl = process.env.REACT_APP_OPENAI_CHAT_API;
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
+let previousMessages = [];
+export async function askQuestion(question) {
+	const conversation = [
+		{ role: "system", content: "You are a helpful assistant." },
+		{ role: "user", content: "Tell me a haiku about color." },
+	];
+	try {
+		const response = await axios.post(
+			apiUrl,
+			{
+				messages: conversation,
+				temperature: 0.7,
+				max_tokens: 150,
+				model: "gpt-3.5-turbo-0613",
+			},
+			{
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${apiKey}`,
 				},
-				{
-					headers: {
-						"Content-Type": "application/json",
-						Authorization: `Bearer ${apiKey}`,
-					},
-				}
-			);
-			console.log("API Response:", response.data);
-			const assistantReply = response.data.choices[0].message.content;
-			return assistantReply;
-		} catch (error) {
-			console.error(
-				"Error making API request:",
-				error.response ? error.response.data : error.message
-			);
-			return null;
-		}
+			}
+		);
+		console.log("API Response:", response.data);
+		const assistantReply = response.data.choices[0].message.content;
+		return `${assistantReply}`;
+	} catch (error) {
+		console.error("Error making API request:", error.response ? error.response.data : error.message);
+		return null;
 	}
-	let previousMessages = [];
-	const userQuestion = "Tell me a quote from an artist.";
-	askQuestion(previousMessages, userQuestion).then((assistantReply) => {
-		console.log("Assistant:", assistantReply || "Unable to provide an answer.");
-		// Save the assistant's reply to use in the next interaction
-		previousMessages.push({ role: "assistant", content: assistantReply });
-	});
 }
-
-export default useAPI;
+const userQuestion = "Tell me a quote from an artist.";
+askQuestion(previousMessages, userQuestion).then((assistantReply) => {
+	console.log("Assistant:", assistantReply || "Unable to provide an answer.");
+	// Save the assistant's reply to use in the next interaction
+	previousMessages.push({ role: "assistant", content: assistantReply });
+});
