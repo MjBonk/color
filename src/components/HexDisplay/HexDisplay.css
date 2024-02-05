@@ -1,0 +1,56 @@
+.primary-hex-display {
+	padding:1rem;
+	background-color: var(--clr-primary);
+	border: solid var(--clr-accent) var(--size-border);
+	height: 100%;
+	border-radius: 1.5rem;
+	grid-area: 2 / 2 / 6 / 6;
+}
+
+.accent-hex-display {
+	padding:1rem;
+	background-color: var(--clr-accent);
+	height: 100%;
+	border-radius: 1.5rem;
+	grid-area: 8 / 2 / 12 / 6;
+}
+
+
+.accent-hex-display > h1 {
+	color: var(--clr-primary);
+	font-size: 3rem;
+}
+.primary-hex-display > h1 {
+	font-size: 3rem;
+	color: var(--clr-accent);
+
+}
+.accent-hex-display > p {
+	font-family: RR;
+	color: var(--clr-primary);
+}
+.primary-hex-display > p {
+	font-family: RR;
+	color: var(--clr-accent);
+
+}
+
+.hex-text {
+	font-size: 4rem;
+}
+
+/* const wrapper = useRef(null);
+const text = useRef(null);
+
+if (wrapper.current) {
+	if (props.className == "primary-hex-display") {
+		text.current.style.color = "var(--clr-accent)";
+		wrapper.current.style.backgroundColor = "var(--clr-primary)";
+		wrapper.current.style.border = "var(--clr-accent) solid var(--size-border)";
+	} else {
+		text.current.style.color = "var(--clr-primary)";
+		wrapper.current.style.backgroundColor = "var(--clr-accent)";
+		wrapper.current.style.border = "0";
+		wrapper.current.style.gridArea = "8 / 2 / 12 / 6;";
+	}
+} */

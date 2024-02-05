@@ -1,3 +1,41 @@
+@font-face {
+  font-family: MNFR;
+  src: url("./assets/MesloLGS\ NF\ Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: RR;
+  src: url("./assets/Righteous-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Mantranaga;
+  src: url("./assets/Mantranaga36Daysoftype2023.ttf") format("truetype");
+}
+@font-face {
+  font-family: Alinsa;
+  src: url("./assets/Alinsa.ttf") format("truetype");
+}
+@font-face {
+  font-family: COLA;
+  src: url("./assets/ColaDemo.otf") format("truetype");
+}
+
+
+
+:root {
+  --clr-accent: black;
+  --clr-primary: white;
+  --ff-rubic: "Rubik Mono One", monospace;
+  --ff-righteous: 'Righteous', sans-serif;
+  --ff-montserrat: 'Montserrat', sans-serif;
+  --size-border: 3px;
+
+  --transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  /* transition: var(--transition) */
+  --mq-sm: 480px
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,17 +54,6 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --clr-accent: black;
-  --clr-primary: white;
-  --ff-rubic: "Rubik Mono One", monospace;
-  --ff-righteous: 'Righteous', sans-serif;
-  --ff-montserrat: 'Montserrat', sans-serif;
-
-  --transition: background-color 1s ease-in-out, color 1s ease-in-out;
-  /* transition: var(--transition) */
-  --mq-sm: 480px
-}
 
 * {
   box-sizing: border-box;
@@ -54,7 +81,8 @@ h1 {
   font-size: 2.5rem;
   font-family: var(--ff-rubic);
 }
-p{
+
+p {
   font-family: var(--ff-montserrat);
 }
 

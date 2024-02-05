@@ -29,10 +29,6 @@ function Button() {
 		const header = document.querySelector(".header");
 		const scrollDistance = document.documentElement.clientHeight;
 
-		console.log(section1Position)
-
-
-
 
 		if (section1Position.top === 0) {
 			// go to page 2

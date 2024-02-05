@@ -25,7 +25,7 @@ function CircleText() {
 					}}
 				>
 					<textPath href="#circlePath">
-						tet text text text text text text text text text
+					Color is a form of non-verbal communication.
 					</textPath>
 				</text>
 			</svg>

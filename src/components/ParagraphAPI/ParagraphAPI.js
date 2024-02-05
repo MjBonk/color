@@ -3,13 +3,11 @@ import { useEffect , useState } from 'react';
 
 function ParagraphAPI() {
 	const [assistantResponse, setAssistantResponse] = useState("");
-	console.log(assistantResponse)
+	
 	useEffect(() => {
 	  const userQuestion = 'Tell me a quote from a color.';
 	  askQuestion(userQuestion)
 		.then(assistantReply => {
-		  console.log('Assistant:', assistantReply || 'Unable to provide an answer.');
-		  //assistantReply(assistantReply);
 		 setAssistantResponse(assistantReply);
 		})
 		.catch(error => {

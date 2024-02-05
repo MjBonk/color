@@ -26,17 +26,13 @@ export async function askQuestion(question) {
 				},
 			}
 		);
-		console.log("API Response:", response.data);
 		const assistantReply = response.data.choices[0].message.content;
 		return `${assistantReply}`;
 	} catch (error) {
-		console.error("Error making API request:", error.response ? error.response.data : error.message);
 		return null;
 	}
 }
 const userQuestion = "Tell me a quote from an artist.";
 askQuestion(previousMessages, userQuestion).then((assistantReply) => {
-	console.log("Assistant:", assistantReply || "Unable to provide an answer.");
-	// Save the assistant's reply to use in the next interaction
 	previousMessages.push({ role: "assistant", content: assistantReply });
 });

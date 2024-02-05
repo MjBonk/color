@@ -12,6 +12,7 @@ import StarFlower from "./components/graphic-elements/StarFlower/StarFlower";
 import Toggle from "./components/Toggle/Toggle";
 import Domino from "./components/graphic-elements/Domino/Domino";
 import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimation/StaggeringAnimation";
+import HexDisplay from "./components/HexDisplay/HexDisplay";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
@@ -23,13 +24,9 @@ function App() {
 			<Button />
 			<section id="section1" className="site-section section1">
 				<div className="section1__text-wrapper">
-					<h1 className="section1__main-title">2 COLOR WEB</h1>
+					<h1 className="section1__main-title">I'M A TITLE</h1>
 					<p>
-						Emmet is great for that. With it installed in the code editor you are
-						using, you can type “lorem” and then tab and it will expand into a
-						paragraph of Lorem Ipsum placeholder text. But it can do more! You can
-						control how much you get, place it within HTML structure as it expands,
-						and get different bits of it in repeated elements.
+						I'm some intro text I'm some intro text I'm some intro text I'm some intro text I'm some intro text I'm some intro text I'm some intro text I'm some intro text 
 					</p>
 				</div>
 				<CircleText />
@@ -41,13 +38,17 @@ function App() {
 			</section>
 
 			<section id="section3" className="site-section section3">
-				{/* <StarFlower /> */}
+				<StarFlower />
 				<div className="marquee"></div>
-				<div className="box1"></div>
+
+				<HexDisplay className={"primary-hex-display"} />
+
 				<div className="dividerNilas">
 					<Domino />
 				</div>
-				<div className="box2"></div>
+
+				<HexDisplay className={"accent-hex-display"} />
+
 				<div className="title-toggles-textAI">
 					<h1>TITLE</h1>
 					<Toggle BW={true} />
@@ -59,7 +60,7 @@ function App() {
 				<div className="carmela">
 					<StaggeringAnimation />
 				</div>
-				<div className="bigword"></div>
+				<div className="bigword">BIG WORD</div>
 			</section>
 		</main>
 	);

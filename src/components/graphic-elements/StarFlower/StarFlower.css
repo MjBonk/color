@@ -3,10 +3,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: relative;
-	height: 10rem;
-	width: 10rem;
-	animation: spin 30s linear reverse infinite;
+	height: 15rem;
+	width: 15rem;
+	animation: spin 100s linear reverse infinite;
+	position: absolute;
+	top: 0;
+	right: -50px;
 }
 
 
@@ -46,10 +48,10 @@
 .gradient {
 	background-color: blue;
 	position: absolute;
-	width: 90%;
-	height: 90%;
+	width: 70%;
+	height: 70%;
 	border-radius: 50%;
 	background-color: var(--clr-primary);
-	filter: blur(25px);
+	filter: blur(35px);
 	transition: var(--transition);
 }

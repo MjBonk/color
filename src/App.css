@@ -20,9 +20,9 @@ section {
 	max-width: 42rem;
 }
 
+
 .section1__main-title {
 	width: 10rem;
-	word-spacing: -1rem;
 }
 
 @media screen and (min-width: 36em) {
@@ -43,6 +43,9 @@ section {
 	.section2 {
 		flex-direction: column;
 	}
+	.section1__main-title {
+		width: 100%;
+	}
 }
 
 .section3 {
@@ -50,7 +53,9 @@ section {
 	display: grid;
 	grid-template-columns: 40px repeat(11, 1fr);
 	grid-template-rows: repeat(11, 1fr);
-	gap: 1rem
+	gap: 1rem;
+	overflow: hidden;
+	position: relative;
 }
 
 .marquee {
@@ -58,24 +63,12 @@ section {
 	background-color: aquamarine;
 }
 
-.box1 {
-	grid-area: 2 / 2 / 6 / 6;
-	background-color: salmon;
-}
-
 .dividerNilas {
 	grid-area: 6 / 2 / 8 / 6;
-	background-color: firebrick;
-}
-
-.box2 {
-	background-color: blanchedalmond;
-	grid-area: 8 / 2 / 12 / 6;
 }
 
 .title-toggles-textAI {
 	grid-area: 2 / 6 / 6 / 10;
-	background-color: blue;
 	border-left: solid var(--clr-accent) 10px;
 }
 
@@ -90,15 +83,19 @@ section {
 
 .textinput {
 	grid-area: 3 / 10 / 8 / 13;
-	background-color: blueviolet;
 }
 
 .carmela {
 	grid-area: 8 / 10 / 10 / 13;
-	background-color: burlywood;
 }
 
 .bigword {
 	grid-area: 10 / 8 / 12 / 13;
-	background-color: pink;
+	color: var(--clr-accent);
+	font-family: COLA;
+	font-size: 7vw;
+	display: flex;
+	height: 100%;
+	align-items: end;
+	justify-content: center;
 }
