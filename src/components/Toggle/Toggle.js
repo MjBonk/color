@@ -4,32 +4,30 @@ import Switch from "react-switch";
 import { Context } from "../../ContextProvider";
 
 export default function Toggle(props) {
-	const { setPrimaryColor, accentColor, primaryColor } = useContext(Context);
+	const { accentColor, primaryColor, setBW, setInvert } = useContext(Context);
 
 	const [checked, setChecked] = useState(false);
-	const [originalColor, setOriginalColor] = useState(primaryColor);
 
 	useEffect(() => {
 		if (props.BW) {
 			if (checked) {
 				// Store the original primary color only the first time the switch is activated
-				setOriginalColor("#FFFFFF");
-				setPrimaryColor("#000000");
+				//setOriginalColor("#FFFFFF");
+				setBW(true);
 			} else {
 				// When the switch is turned off, restore the original primary color
-				setPrimaryColor(originalColor);
+				setBW(false);
 			}
 		} else {
 			if (checked) {
 				// Store the original primary color only the first time the switch is activated
-				setOriginalColor(primaryColor);
-
-				setPrimaryColor(accentColor);
+				setInvert(true);
 			} else {
 				// When the switch is turned off, restore the original primary color
-				setPrimaryColor(originalColor);
+				setInvert(false);
 			}
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [checked]);
 
 	const handleChange = (nextChecked) => {
