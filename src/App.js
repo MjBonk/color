@@ -56,25 +56,12 @@ function App() {
 
 			<section id="section3" className="site-section section3">
 				{/* <StarFlower /> */}
-				{/* <VerticalMarquee />
-				<HexDisplay className={"primary-hex-display"} />
-				<Domino />
-				<HexDisplay className={"accent-hex-display"} />
-				<div className="title-toggles-textAI">
-					<h1>TITLE</h1>
-					<Toggle BW={true} />
-					<Toggle BW={false} />
-					<ParagraphAPI />
-				</div>
-				<div className="Circle"></div>
-				<FormText />
-				<StaggeringAnimation />
-				<div className="bigword">BIG WORD</div> */}
 				<VerticalMarquee />
 				<HexDisplay className={"primary-hex-display"} />
 				<HexDisplay className={"accent-hex-display"} />
 				<div className="title-textAI">
-					<h1>YOU COLORED ME TWICE</h1>
+					<h1>YOU COLORED ME TWICE!</h1>
+					<br/>
 					<ParagraphAPI />
 				</div>
 

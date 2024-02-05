@@ -62,6 +62,14 @@ function Domino(props) {
 				style={{ backgroundColor: props.backgroundColor }}
 				className="domino-brick10 domino-brick"
 			></div>
+			<div
+				style={{ backgroundColor: props.backgroundColor }}
+				className="domino-brick11 domino-brick"
+			></div>
+			<div
+				style={{ backgroundColor: props.backgroundColor }}
+				className="domino-brick12 domino-brick"
+			></div>
 		</div>
 	);
 }

@@ -60,6 +60,23 @@ section {
 	position: relative;
 }
 
+/* 
+put new grid template in mediaquerie 
+.parent {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	}
+	
+	.div1 { grid-area: 1 / 1 / 2 / 6; }
+	.div2 { grid-area: 2 / 1 / 6 / 6; }
+	.div3 { grid-area: 6 / 1 / 7 / 6; }
+	.div4 { grid-area: 7 / 1 / 11 / 6; }
+	.div5 { grid-area: 11 / 1 / 12 / 6; }
+	.div6 { grid-area: 12 / 1 / 13 / 6; } */
+
 .title-textAI {
 	grid-area: 2 / 5 / 7 / 9;
 	border-left: solid var(--clr-accent) 10px;

@@ -1,5 +1,7 @@
 .flex {
     display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: 7 / 5 / 11 / 9;
     width: 100%;
 }

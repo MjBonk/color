@@ -1,6 +1,7 @@
 .primary-hex-display {
 	padding: 1rem;
 	background-color: var(--clr-primary);
+	transition: var(--transition);
 	border: solid var(--clr-accent) var(--size-border);
 	height: 100%;
 	border-radius: 1.5rem;
