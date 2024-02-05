@@ -1,11 +1,16 @@
+.staggeringAnimation {
+	grid-area: 2 / 12 / 13 / 13;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
 .staggering-content {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	width: 600px;
-	height: 100%;
 	cursor: pointer;
 }
 

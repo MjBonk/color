@@ -1,6 +1,7 @@
 import "./HexDisplay.css";
 import { useContext, useRef } from "react";
 import { Context } from "../../ContextProvider";
+import Domino from "../graphic-elements/Domino/Domino";
 
 function HexDisplay(props) {
 	const { primaryColor, accentColor } = useContext(Context);
@@ -12,9 +13,18 @@ function HexDisplay(props) {
 			<h1 className="hex-text">
 				{props.className === "primary-hex-display" ? primaryColor : accentColor}
 			</h1>
-			<p>.result {leftCurl} </p> 
-			<p>&nbsp;&nbsp;&nbsp;background-color: {props.className === 'primary-hex-display' ? primaryColor : accentColor}; </p>
-			<p>&nbsp;&nbsp;&nbsp;color: {props.className === 'primary-hex-display' ? accentColor : primaryColor};</p>
+			<Domino
+				backgroundColor={props.className === "primary-hex-display" ? accentColor : primaryColor }
+			/>
+			<p>.result {leftCurl} </p>
+			<p>
+				&nbsp;&nbsp;&nbsp;background-color:{" "}
+				{props.className === "primary-hex-display" ? primaryColor : accentColor};{" "}
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;color:{" "}
+				{props.className === "primary-hex-display" ? accentColor : primaryColor};
+			</p>
 			<p>{rightCurl}</p>
 		</div>
 	);

@@ -9,6 +9,7 @@
 	position: absolute;
 	top: 0;
 	right: -50px;
+	z-index: 100;
 }
 
 
@@ -48,8 +49,8 @@
 .gradient {
 	background-color: blue;
 	position: absolute;
-	width: 70%;
-	height: 70%;
+	width: 60%;
+	height: 60%;
 	border-radius: 50%;
 	background-color: var(--clr-primary);
 	filter: blur(35px);

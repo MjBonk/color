@@ -51,42 +51,26 @@ section {
 .section3 {
 	background-color: var(--clr-primary);
 	display: grid;
-	grid-template-columns: 40px repeat(11, 1fr);
-	grid-template-rows: repeat(11, 1fr);
-	gap: 1rem;
+	grid-template-columns: 65px repeat(10, 1fr) 65px;
+	grid-template-rows: repeat(12, 1fr);
+	gap: 2rem;
+	padding: 2rem;
 	overflow: hidden;
 	position: relative;
 }
 
-.marquee {
-	grid-area: 2 / 1 / 13 / 2;
-	background-color: aquamarine;
-}
-
-.dividerNilas {
-	grid-area: 6 / 2 / 8 / 6;
-}
-
 .title-toggles-textAI {
-	grid-area: 2 / 6 / 6 / 10;
+	grid-area: 2 / 5 / 7 / 9;
 	border-left: solid var(--clr-accent) 10px;
 }
 
 .Circle {
-	grid-area: 6 / 6 / 10 / 10;
+	grid-area: 7 / 5 / 11 / 9;
 	background-color: var(--clr-accent);
-	width: 20vw;
-	height: 20vw;
+	width: 15vw;
+	height: 15vw;
 	margin: 0 auto;
 	border-radius: 50%;
-}
-
-.textinput {
-	grid-area: 3 / 10 / 8 / 13;
-}
-
-.carmela {
-	grid-area: 8 / 10 / 10 / 13;
 }
 
 .bigword {
@@ -98,4 +82,11 @@ section {
 	height: 100%;
 	align-items: end;
 	justify-content: center;
+}
+
+.toggles{
+	grid-area: 12 / 5 / 13 / 9;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
