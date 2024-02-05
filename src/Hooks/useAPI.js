@@ -8,7 +8,7 @@ let previousMessages = [];
 export async function askQuestion(question) {
 	const conversation = [
 		{ role: "system", content: "You are a helpful assistant." },
-		{ role: "user", content: "Tell me a poem about color sience that's 25 words long" },
+		{ role: "user", content: "Tell me a poem about color sience that's 242 characters long and end with a random hashtag" },
 	];
 	try {
 		const response = await axios.post(

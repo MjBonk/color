@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    grid-area: 7 / 5 / 11 / 9;
+    width: 100%;
+}
+
+.circle {
+    background-color: var(--clr-accent);
+    width: 17vw;
+    height: 17vw;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    border: 2px var(--clr-accent) solid;
+}

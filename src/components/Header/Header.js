@@ -19,6 +19,7 @@ function Header() {
                 <TbDroplet className="logo" />
                 <TbDropletFilled className="logo" />
             </motion.div>
+            <p>COLOR ME TWICE</p>
         </header>
     );
 }

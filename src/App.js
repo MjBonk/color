@@ -15,6 +15,7 @@ import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimati
 import HexDisplay from "./components/HexDisplay/HexDisplay";
 import FormText from "./components/graphic-elements/FormText.js/FormText";
 import VerticalMarquee from "./components/graphic-elements/VerticalMarquee/VerticalMarquee";
+import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircle";
 
 function App() {
 	// saying we want to use the varieble mixColors from context
@@ -43,6 +44,7 @@ function App() {
 						</span>
 					</p>
 				</div>
+
 				<CircleText />
 			</section>
 
@@ -53,7 +55,7 @@ function App() {
 			</section>
 
 			<section id="section3" className="site-section section3">
-				<StarFlower />
+				{/* <StarFlower /> */}
 				{/* <VerticalMarquee />
 				<HexDisplay className={"primary-hex-display"} />
 				<Domino />
@@ -71,11 +73,10 @@ function App() {
 				<VerticalMarquee />
 				<HexDisplay className={"primary-hex-display"} />
 				<HexDisplay className={"accent-hex-display"} />
-				<div className="title-toggles-textAI">
-					<h1>TITLE</h1>
+				<div className="title-textAI">
+					<h1>YOU COLORED ME TWICE</h1>
 					<ParagraphAPI />
 				</div>
-				<div className="Circle"></div>
 
 				<div className="toggles">
 					<div>
@@ -90,6 +91,7 @@ function App() {
 				</div>
 
 				<StaggeringAnimation />
+				<FollowCircle />
 			</section>
 		</main>
 	);

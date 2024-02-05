@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 
 function Button() {
 	const [buttonText, setButtonText] = useState("START");
-	const { mixColors, setMixColors, primaryColor, setColor, accentColor } = useContext(Context);
+	const { mixColors, setMixColors, primaryColor, setColor, accentColor, setBW } = useContext(Context);
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
@@ -29,13 +29,11 @@ function Button() {
 		const header = document.querySelector(".header");
 		const scrollDistance = document.documentElement.clientHeight;
 
-
 		if (section1Position.top === 0) {
 			// go to page 2
 			window.scrollBy(0, scrollDistance);
 			setButtonText("MIX");
 			header.style.top = `-${header.getBoundingClientRect().height}px`;
-
 		} else if (section2Position.top === 0) {
 			// go to page 3
 			setColor(chroma.mix(mixColors.one, mixColors.two).hex());
@@ -53,6 +51,7 @@ function Button() {
 				setMixColors({ one: "#000000", two: "#FFFFFF" });
 			}, 1000);
 			return () => clearTimeout(timeoutId);
+			setBW(false);
 		}
 	}
 

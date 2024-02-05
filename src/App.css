@@ -55,23 +55,20 @@ section {
 	grid-template-rows: repeat(12, 1fr);
 	gap: 2rem;
 	padding: 2rem;
+	padding-top: 3rem;
 	overflow: hidden;
 	position: relative;
 }
 
-.title-toggles-textAI {
+.title-textAI {
 	grid-area: 2 / 5 / 7 / 9;
 	border-left: solid var(--clr-accent) 10px;
+	padding: 0 1rem;
+}
+.title-textAI > h1{
+	font-size: 2.5rem;
 }
 
-.Circle {
-	grid-area: 7 / 5 / 11 / 9;
-	background-color: var(--clr-accent);
-	width: 15vw;
-	height: 15vw;
-	margin: 0 auto;
-	border-radius: 50%;
-}
 
 .bigword {
 	grid-area: 10 / 8 / 12 / 13;
@@ -87,6 +84,12 @@ section {
 .toggles{
 	grid-area: 12 / 5 / 13 / 9;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+	padding: 1rem;
+}
+
+.toggles > div{
+	display: grid;
+	place-items: center;
 }

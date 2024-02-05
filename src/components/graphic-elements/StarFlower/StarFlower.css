@@ -3,8 +3,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 15rem;
-	width: 15rem;
+	height: 10rem;
+	width: 10rem;
 	animation: spin 100s linear reverse infinite;
 	position: absolute;
 	top: 0;

@@ -20,4 +20,6 @@
 
 .header>p {
 	color: var(--clr-primary);
+	font-family: var(--ff-rubic);
+	font-size: 1.5rem;
 }

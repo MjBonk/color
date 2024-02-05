@@ -6,6 +6,7 @@
 	width: 100%;
 	height: 20%;
 	transition: all 0.5s ease-in-out;
+	margin-bottom: 1rem; 
 }
 
 .domino-brick {
