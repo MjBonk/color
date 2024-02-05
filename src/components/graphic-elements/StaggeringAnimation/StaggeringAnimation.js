@@ -18,38 +18,25 @@ function StaggeringAnimation() {
 
 	return (
 		<>
-			<div className="staggeringAnimation">
-				<div class="staggering-content staggering-grid" onClick={handleOnClick}>
+			<div className="staggeringAnimation" onMouseOver={handleOnClick}>
+				<div class="staggering-content staggering-grid" >
 					<div class="grid-square">
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
-						<div class="small square el"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-25"></div>
+						<div class="small square el squareOp-25"></div>
+						<div class="small square el squareOp-25"></div>
+						<div class="small square el squareOp-25"></div>
+						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-75"></div>
+						<div class="small square el squareOp-75"></div>
+						<div class="small square el squareOp-75"></div>
+						<div class="small square el squareOp-75"></div>
 						<div class="small square el"></div>
 						<div class="small square el"></div>
 						<div class="small square el"></div>

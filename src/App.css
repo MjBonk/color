@@ -43,6 +43,7 @@ section {
 	.section2 {
 		flex-direction: column;
 	}
+
 	.section1__main-title {
 		width: 100%;
 	}
@@ -54,7 +55,7 @@ section {
 	grid-template-columns: 65px repeat(10, 1fr) 65px;
 	grid-template-rows: repeat(12, 1fr);
 	gap: 2rem;
-	padding: 2rem;
+	padding: 2rem ;
 	padding-top: 3rem;
 	overflow: hidden;
 	position: relative;
@@ -82,7 +83,8 @@ put new grid template in mediaquerie
 	border-left: solid var(--clr-accent) 10px;
 	padding: 0 1rem;
 }
-.title-textAI > h1{
+
+.title-textAI>h1 {
 	font-size: 2.5rem;
 }
 
@@ -98,15 +100,21 @@ put new grid template in mediaquerie
 	justify-content: center;
 }
 
-.toggles{
+.toggles {
 	grid-area: 12 / 5 / 13 / 9;
 	display: flex;
+	height: 100%;
 	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
+	align-items: flex-end;
+	padding: 0 1rem;
 }
 
-.toggles > div{
+.toggles>div {
 	display: grid;
 	place-items: center;
+}
+
+.toggles>div>p {
+	font-weight: bold;
+	font-family: RR;
 }

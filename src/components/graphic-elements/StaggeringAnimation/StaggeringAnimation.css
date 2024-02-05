@@ -3,28 +3,28 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-}
-
-.staggering-content {
+  }
+  
+  .staggering-content {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	text-align: center;
 	cursor: pointer;
-}
-
-.grid-square {
+	justify-content: flex-end;
+  }
+  
+  .grid-square {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.small {
+  }
+  
+  .small {
 	width: 20px;
 	height: 20px;
-}
-
-.square {
+  }
+  
+  .square {
 	pointer-events: none;
 	position: relative;
 	width: 30px;
@@ -32,4 +32,24 @@
 	margin: 1px;
 	background-color: var(--clr-accent);
 	font-size: 14px;
-}
+  }
+  
+  /* 100 - 85 - 65 - 45 - 25 */
+  .squareOp-10 {
+	opacity: 10%;
+  }
+  
+  .squareOp-25 {
+	opacity: 25%;
+  }
+  .squareOp-45 {
+	opacity: 45%;
+  }
+  .squareOp-75 {
+	opacity: 75%;
+  }
+  
+  
+  
+  
+  
