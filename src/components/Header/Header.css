@@ -13,10 +13,10 @@
 }
 
 .logo {
-	transition: var(--clr-accent);
 	color: var(--clr-primary);
 	font-size: 45px;
 	cursor: pointer;
+	transition: var(--transition);
 }
 
 .header>p {

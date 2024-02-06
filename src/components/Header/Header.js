@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 function Header() {
 	return (
         <header className="header">
-            <motion.div
+            <motion.div className="logos"
             drag
             dragConstraints={{
                 right: 0,

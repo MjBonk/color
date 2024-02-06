@@ -1,12 +1,12 @@
-.site-section {
-	height: 100vh;
-}
-
 section {
-	transition: var(--transition);
+	height: 100vh;
 	background-color: var(--clr-primary);
+	transition: var(--transition);
 }
 
+
+
+/* SECTION_1_________________________________ */
 .section1 {
 	background-color: var(--clr-primary);
 	display: flex;
@@ -21,20 +21,26 @@ section {
 	max-width: 42rem;
 }
 
-
 .section1__main-title {
 	width: 10rem;
 }
 
-@media screen and (min-width: 36em) {
+@media screen and (min-width: 550px) {
 	.section1__main-title {
 		width: 100vw;
+	}
+}
+
+@media (max-width: 800px) {
+	.section1__main-title {
+		width: 100%;
 	}
 }
 
 
 
 
+/* SECTION_2_________________________________ */
 .section2 {
 	display: flex;
 	position: relative;
@@ -44,46 +50,22 @@ section {
 	.section2 {
 		flex-direction: column;
 	}
-
-	.section1__main-title {
-		width: 100%;
-	}
 }
 
+
+
+
+/* SECTION_3_________________________________ */
 .section3 {
 	background-color: var(--clr-primary);
+	position: relative;
 	display: grid;
 	grid-template-columns: 50px repeat(3, 1fr) repeat(4, .7fr) repeat(3, 1fr) 50px;
 	grid-template-rows: repeat(12, 1fr);
 	gap: 1rem;
-	padding: 2rem 1rem;
-	padding-top: 3rem;
-	position: relative;
+	padding: 3rem 1rem 2rem 1rem;
 }
 
-
-.title-textAI {
-	grid-area: 2 / 5 / 7 / 9;
-	border-left: solid var(--clr-accent) 5px;
-	padding: 0 .5rem;
-	height: 100%;
-}
-
-.title-textAI>h1 {
-	font-size: 2.5rem;
-}
-
-
-.bigword {
-	grid-area: 10 / 8 / 12 / 13;
-	color: var(--clr-accent);
-	font-family: COLA;
-	font-size: 7vw;
-	display: flex;
-	height: 100%;
-	align-items: end;
-	justify-content: center;
-}
 
 .toggles {
 	grid-area: 12 / 5 / 13 / 9;
@@ -105,17 +87,8 @@ section {
 	font-family: RR;
 }
 
-@media (max-width: 1400px) {
-	.title-textAI>h1 {
-		font-size: 2rem;
-	}
-}
 
 @media (max-width: 1200px) {
-	.title-textAI>h1 {
-		font-size: 1.5rem;
-	}
-
 	.toggles {
 		grid-area: 11 / 5 / 12 / 9;
 	}
@@ -124,7 +97,7 @@ section {
 @media (max-width: 800px) {
 	.section3 {
 		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(9, 1fr) 40px 1fr ;
+		grid-template-rows: repeat(9, 1fr) 40px 1fr;
 		gap: .3rem;
 		padding: 4rem 1em 1em 1rem;
 		overflow: hidden;
@@ -135,14 +108,10 @@ section {
 	}
 
 	.phone-domino {
-		grid-area:5 / 1 / 6 / 6
+		grid-area: 5 / 1 / 6 / 6
 	}
 
 	.hex-domino {
-		display: none;
-	}
-
-	.title-textAI {
 		display: none;
 	}
 }

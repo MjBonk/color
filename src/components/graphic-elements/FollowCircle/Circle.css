@@ -12,6 +12,7 @@
     height: 17vw;
     margin: 0 auto;
     border-radius: 50%;
+    transition: var(--transition);
 }
 
 .box {
@@ -20,6 +21,7 @@
     border-radius: 50%;
     background: var(--clr-primary);
     border: 2px var(--clr-accent) solid;
+    transition: var(--transition);
 }
 
 @media (max-width: 1200px) {

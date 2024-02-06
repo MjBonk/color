@@ -10,21 +10,34 @@ export default function Toggle(props) {
 		props.setValue(nextChecked);
 	};
 
+	function handleMouseEnter() {
+		document.documentElement.style.setProperty(
+			"--transition",
+			"background-color 0s ease-in-out, color 0s ease-in-out, border 0s ease-in-out"
+		);
+	}
+	function handleMouseLeave() {
+		document.documentElement.style.setProperty(
+			"--transition",
+			"background-color .5s ease-in-out 1s , color .5s ease-in-out 1s, border-color .5s ease-in-out 1s "
+		);
+	}
+
 	return (
-		<div>
-		  <p>{props.text}</p>
-		  <Switch
-			onChange={handleChange}
-			checked={props.value}
-			uncheckedIcon={false}
-			checkedIcon={false}
-			offColor={accentColor}
-			onColor={accentColor}
-			offHandleColor={primaryColor}
-			onHandleColor={primaryColor}
-		  />
+		<div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+			<p>{props.text}</p>
+			<Switch
+				onChange={handleChange}
+				checked={props.value}
+				uncheckedIcon={false}
+				checkedIcon={false}
+				offColor={accentColor}
+				onColor={accentColor}
+				offHandleColor={primaryColor}
+				onHandleColor={primaryColor}
+			/>
 		</div>
-	  );
+	);
 }
 
 /* 

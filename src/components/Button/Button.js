@@ -26,9 +26,8 @@ function Button() {
 			window.scrollBy(0, scrollDistance);
 			setButtonText("RESTART");
 			header.style.top = "0px";
-			// chroma mix API sets the primary color to the result of mixed colors 
+			// chroma mix API sets the primary color to the result of mixed colors
 			setColor(chroma.mix(mixColors.one, mixColors.two).hex());
-
 
 			// go to page 1
 		} else if (section3Position.top === 0) {
@@ -43,21 +42,7 @@ function Button() {
 			return () => clearTimeout(timeoutId);
 		}
 	}
-
-	// delay of color change
-	useEffect(() => {
-		const timeoutId = setTimeout(() => {
-			document.documentElement.style.setProperty("--clr-primary", primaryColor);
-		}, 1000); // delay time in milliseconds
-		return () => clearTimeout(timeoutId);
-	}, [primaryColor]);
-
-	useEffect(() => {
-		const timeoutId = setTimeout(() => {
-			document.documentElement.style.setProperty("--clr-accent", accentColor);
-		}, 1000);
-		return () => clearTimeout(timeoutId);
-	}, [accentColor]);
+	
 
 	return (
 		<button onClick={handleOnClick} className="main-button">

@@ -1,16 +1,25 @@
 .main-button {
-	font-family: var(--ff-rubic);
 	position: fixed;
-	bottom: 10px;
+	top: 95vh;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	transition: all .5s ease-in-out;
+	
 	z-index: 5;
+	padding: .5rem 1rem;
+	border-radius: 50rem;
+	background-color: var(--clr-accent);
+	
+	font-family: var(--ff-rubic);
+	font-weight: bold;
+	font-size: 1.2rem;
+	border: solid 4px var(--clr-primary);
+	color: var(--clr-primary);
+	cursor: pointer;
+	transition: var(--transition);
 }
-
 
 @media (max-width: 800px) {
 	.main-button{
-		bottom: 0px;
+		top: 96vh;
 	}
 }

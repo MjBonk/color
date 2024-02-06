@@ -15,11 +15,13 @@
 }
 
 .y {
+	transition: none;
 	height: 100%;
 	width: 15%;
 }
 
 .x {
+	transition: none;
 	content: '';
 	display: block;
 	width: 40%;

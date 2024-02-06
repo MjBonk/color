@@ -1,7 +1,8 @@
 import { askQuestion, assistantReply } from "../../Hooks/useAPI";
 import { useEffect, useState } from "react";
+import "./TitleAiPoem.css"
 
-function ParagraphAPI() {
+function TitleAiPoem() {
 	const [assistantResponse, setAssistantResponse] = useState("");
 
 	useEffect(() => {
@@ -25,4 +26,4 @@ function ParagraphAPI() {
 	);
 }
 
-export default ParagraphAPI;
+export default TitleAiPoem;

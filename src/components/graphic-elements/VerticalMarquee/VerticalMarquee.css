@@ -11,6 +11,8 @@
 	font-family: RR;
 	font-weight: 400;
 	font-style: normal;
+	text-transform:uppercase;
+	transition: var(--transition);
 }
 
 @media (max-width: 800px) {
