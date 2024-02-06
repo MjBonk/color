@@ -7,3 +7,10 @@
 	transition: all .5s ease-in-out;
 	z-index: 5;
 }
+
+
+@media (max-width: 800px) {
+	.main-button{
+		bottom: .2rem;
+	}
+}

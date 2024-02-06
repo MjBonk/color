@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
@@ -20,6 +20,10 @@ import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircl
 function App() {
 	// saying we want to use the varieble mixColors from context
 	const { mixColors, BW, setBW, invert, setInvert } = useContext(Context);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<main>

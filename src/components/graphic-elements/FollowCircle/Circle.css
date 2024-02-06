@@ -21,8 +21,9 @@
     background: var(--clr-primary);
     border: 2px var(--clr-accent) solid;
 }
-@media (max-width: 725px) {
-    .flex{
+
+@media (max-width: 1200px) {
+    .flex {
         display: none;
     }
 }

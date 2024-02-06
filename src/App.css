@@ -40,7 +40,7 @@ section {
 	position: relative;
 }
 
-@media (max-width: 725px) {
+@media (max-width: 800px) {
 	.section2 {
 		flex-direction: column;
 	}
@@ -104,20 +104,40 @@ section {
 	font-family: RR;
 }
 
-@media (max-width: 725px) {
-	.section3 {
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(12, 1fr);
-		gap: 0;
-		padding: 1rem 1em 1em 1rem;
+@media (max-width: 1400px) {
+	.title-textAI>h1 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.title-textAI>h1 {
+		font-size: 1.5rem;
 	}
 
 	.toggles {
-		grid-area: 11 / 1 / 12 / 6;
+		grid-area: 11 / 5 / 12 / 9;
+	}
+
+	.section3 {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.section3 {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 40px repeat(11, 1fr);
+		gap: 0;
+		padding: 4rem 1em 1em 1rem;
+	}
+
+	.toggles {
+		grid-area: 12 / 1 / 12 / 6;
 	}
 
 	.phone-domino {
-		grid-area: 5 / 1 / 6 / 6;
+		grid-area: 5 / 1 / 7 / 6;
 	}
 
 	.hex-domino {
@@ -130,7 +150,7 @@ section {
 }
 
 
-@media (min-width: 725px) {
+@media (min-width: 800px) {
 	.phone-domino {
 		display: none;
 	}

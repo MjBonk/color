@@ -28,7 +28,7 @@
 }
 
 
-@media (min-width: 725px) {
+@media (min-width: 800px) {
 	.plus {
 		transform-origin: center center;
 		transform: translate(-50%, -50%) rotate(0deg);

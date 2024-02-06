@@ -13,11 +13,10 @@
 	font-style: normal;
 }
 
-@media (max-width: 725px) {
+@media (max-width: 800px) {
 	.marquee {
 		grid-area: 10 / 1 / 11 / 6;
 		transform: rotate(90deg);
 		display: none;
 	}
 }
-

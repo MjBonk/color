@@ -1,4 +1,4 @@
-.color-box{
+.color-box {
 	height: 100%;
 	width: 50%;
 	display: flex;
@@ -6,9 +6,8 @@
 	justify-content: center;
 }
 
-@media (max-width: 725px) {
-	.color-box{
+@media (max-width: 800px) {
+	.color-box {
 		width: 100%;
 	}
 }
-
