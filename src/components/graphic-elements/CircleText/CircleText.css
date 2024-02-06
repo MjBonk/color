@@ -5,6 +5,7 @@
 	position: absolute;
 	top: 80px;
 	right: 15px;
+	display: none;
 }
 
 .img {
@@ -48,6 +49,7 @@
 		height: 14rem;
 		position: relative;
 		transform: translate(0, -30%);
+		display: block;
 	}
   }
 

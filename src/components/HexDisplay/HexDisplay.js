@@ -13,9 +13,13 @@ function HexDisplay(props) {
 			<h1 className="hex-text">
 				{props.className === "primary-hex-display" ? primaryColor : accentColor}
 			</h1>
-			<Domino
-				backgroundColor={props.className === "primary-hex-display" ? accentColor : primaryColor }
-			/>
+			<div className="hex-domino">
+				<Domino
+					backgroundColor={
+						props.className === "primary-hex-display" ? accentColor : primaryColor
+					}
+				/>
+			</div>
 			<p>.result {leftCurl} </p>
 			<p>
 				&nbsp;&nbsp;&nbsp;background-color:{" "}

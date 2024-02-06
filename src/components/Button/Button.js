@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 
 function Button() {
 	const [buttonText, setButtonText] = useState("START");
-	const { mixColors, setMixColors, primaryColor, setColor, accentColor, setBW } = useContext(Context);
+	const { mixColors, setMixColors, primaryColor, setColor, accentColor, setBW, resetToggles } = useContext(Context);
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
@@ -46,12 +46,12 @@ function Button() {
 			window.scrollTo(0, 0);
 			setButtonText("START");
 			setColor("#FFFFFF");
+			resetToggles();
 
 			const timeoutId = setTimeout(() => {
 				setMixColors({ one: "#000000", two: "#FFFFFF" });
 			}, 1000);
 			return () => clearTimeout(timeoutId);
-			setBW(false);
 		}
 	}
 

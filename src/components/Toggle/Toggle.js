@@ -1,44 +1,20 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 // npm install react-switch
 import Switch from "react-switch";
 import { Context } from "../../ContextProvider";
 
 export default function Toggle(props) {
-	const { accentColor, primaryColor, setBW, setInvert } = useContext(Context);
-
-	const [checked, setChecked] = useState(false);
-
-	useEffect(() => {
-		if (props.BW) {
-			if (checked) {
-				// Store the original primary color only the first time the switch is activated
-				//setOriginalColor("#FFFFFF");
-				setBW(true);
-			} else {
-				// When the switch is turned off, restore the original primary color
-				setBW(false);
-			}
-		} else {
-			if (checked) {
-				// Store the original primary color only the first time the switch is activated
-				setInvert(true);
-			} else {
-				// When the switch is turned off, restore the original primary color
-				setInvert(false);
-			}
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [checked]);
+	const { accentColor, primaryColor } = useContext(Context);
 
 	const handleChange = (nextChecked) => {
-		setChecked(nextChecked);
+		props.setValue(nextChecked);
 	};
 
 	return (
 		<label>
 			<Switch
 				onChange={handleChange}
-				checked={checked}
+				checked={props.value}
 				uncheckedIcon={false}
 				checkedIcon={false}
 				offColor={accentColor}
@@ -49,3 +25,14 @@ export default function Toggle(props) {
 		</label>
 	);
 }
+
+/* 
+The handleChange function is called every time the state of the toggle changes (for example, 
+when a user clicks on the toggle to switch it from on to off, or vice versa). 
+Inside the handleChange function, props.setValue(nextChecked) is called.
+This means that the Toggle communicates to its parent component that the state of the toggle
+has changed, passing the new state (nextChecked) to the parent through a setValue function provided 
+as a prop.
+The primary role of this code snippet is to create a component that, 
+when it interacts with the user (the toggle state changes), 
+notifies this change to its parent component through a callback (setValue). */

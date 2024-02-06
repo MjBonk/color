@@ -19,7 +19,7 @@ import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircl
 
 function App() {
 	// saying we want to use the varieble mixColors from context
-	const { mixColors } = useContext(Context);
+	const { mixColors, BW, setBW, invert, setInvert } = useContext(Context);
 
 	return (
 		<main>
@@ -59,24 +59,26 @@ function App() {
 				<VerticalMarquee />
 				<HexDisplay className={"primary-hex-display"} />
 				<HexDisplay className={"accent-hex-display"} />
-				<div className="title-textAI">
-					<h1>YOU COLORED ME TWICE!</h1>
-					<br/>
-					<ParagraphAPI />
-				</div>
-
 				<div className="toggles">
 					<div>
 						<p>B / W</p>
-						<Toggle BW={true} />
+						<Toggle value={BW} setValue={setBW} />
 					</div>
 
 					<div>
 						<p>SWITCH</p>
-						<Toggle BW={false} />
+						<Toggle value={invert} setValue={setInvert} />
 					</div>
 				</div>
+				<div className="phone-domino">
+					<Domino />
+				</div>
 
+				<div className="title-textAI">
+					<h1>YOU COLORED ME TWICE!</h1>
+					<br />
+					<ParagraphAPI />
+				</div>
 				<StaggeringAnimation />
 				<FollowCircle />
 			</section>

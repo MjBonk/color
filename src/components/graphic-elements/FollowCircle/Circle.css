@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: 7 / 5 / 11 / 9;
+    grid-area: 7 / 5 / 12 / 9;
     width: 100%;
 }
 
@@ -20,4 +20,9 @@
     border-radius: 50%;
     background: var(--clr-primary);
     border: 2px var(--clr-accent) solid;
+}
+@media (max-width: 725px) {
+    .flex{
+        display: none;
+    }
 }
