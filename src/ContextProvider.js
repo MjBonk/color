@@ -21,18 +21,23 @@ function ContextProvider({ children }) {
 		one: "#000000",
 		two: "#FFFFFF",
 	});
+
+
 	const [color, setColor] = useState("#FFFFFF");
+	
+	// state of toggles
 	const [BW, setBW] = useState(false);
 	const [invert, setInvert] = useState(false);
-
+	
 	let primaryColor = color;
+	
 	if (BW === true) {
 		primaryColor = "#FFFFFF";
 	}
 	if (invert === true) {
 		primaryColor = calculateComplementaryColor(primaryColor);
 	}
-
+	
 	const accentColor = calculateComplementaryColor(primaryColor);
 
 	function resetToggles() {

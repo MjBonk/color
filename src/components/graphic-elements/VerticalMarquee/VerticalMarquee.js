@@ -6,8 +6,8 @@ export default function VerticalMarquee() {
   return (
     <div className="marquee">
       <Marquee direction="down">
-        <p>MARQUEE WITH A COOL FONT </p>
-        <p>MARQUEE WITH A COOL FONT </p>
+        <p>MARQUEE WITH A COOL FONT &nbsp;</p>
+        <p>MARQUEE WITH A COOL FONT &nbsp;</p>
       </Marquee>
     </div>
   );

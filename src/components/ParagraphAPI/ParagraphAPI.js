@@ -18,7 +18,7 @@ function ParagraphAPI() {
 		<div className="title-textAI">
 			<h1>YOU COLORED ME TWICE!</h1>
 			<br />
-			<p>{assistantResponse?.length ? assistantResponse : "Loading..."}</p>
+			<p>{assistantResponse?.length ? assistantResponse : "Wait a second..."}</p>
 		</div>
 		// <h1>{assistantResponse || 'Loading...'}</h1>
 		// Or you can use like this
