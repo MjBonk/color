@@ -25,6 +25,10 @@ function StaggeringAnimation() {
 						<div class="small square el squareOp-10"></div>
 						<div class="small square el squareOp-10"></div>
 						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-10"></div>
+						<div class="small square el squareOp-25"></div>
+						<div class="small square el squareOp-25"></div>
 						<div class="small square el squareOp-25"></div>
 						<div class="small square el squareOp-25"></div>
 						<div class="small square el squareOp-25"></div>
@@ -33,10 +37,16 @@ function StaggeringAnimation() {
 						<div class="small square el squareOp-45"></div>
 						<div class="small square el squareOp-45"></div>
 						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-45"></div>
+						<div class="small square el squareOp-45"></div>
 						<div class="small square el squareOp-75"></div>
 						<div class="small square el squareOp-75"></div>
 						<div class="small square el squareOp-75"></div>
 						<div class="small square el squareOp-75"></div>
+						<div class="small square el squareOp-75"></div>
+						<div class="small square el squareOp-75"></div>
+						<div class="small square el"></div>
+						<div class="small square el"></div>
 						<div class="small square el"></div>
 						<div class="small square el"></div>
 						<div class="small square el"></div>

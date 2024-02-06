@@ -11,19 +11,20 @@ export default function Toggle(props) {
 	};
 
 	return (
-		<label>
-			<Switch
-				onChange={handleChange}
-				checked={props.value}
-				uncheckedIcon={false}
-				checkedIcon={false}
-				offColor={accentColor}
-				onColor={accentColor}
-				offHandleColor={primaryColor}
-				onHandleColor={primaryColor}
-			/>
-		</label>
-	);
+		<div>
+		  <p>{props.text}</p>
+		  <Switch
+			onChange={handleChange}
+			checked={props.value}
+			uncheckedIcon={false}
+			checkedIcon={false}
+			offColor={accentColor}
+			onColor={accentColor}
+			offHandleColor={primaryColor}
+			onHandleColor={primaryColor}
+		  />
+		</div>
+	  );
 }
 
 /* 

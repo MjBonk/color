@@ -1,26 +1,26 @@
-import { useContext, useEffect } from "react";
 import "./App.css";
+import { useContext, useEffect } from "react";
+import { Context } from "./ContextProvider";
+//import the context we created
+
 import Button from "./components/Button/Button";
 import ColorBox from "./components/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
 import CircleText from "./components/graphic-elements/CircleText/CircleText";
 import ParagraphAPI from "./components/ParagraphAPI/ParagraphAPI";
 import PlusSign from "./components/graphic-elements/PlusSign/PlusSign";
-//import the context we created
-import { Context } from "./ContextProvider";
-import StarFlower from "./components/graphic-elements/StarFlower/StarFlower";
 import Toggle from "./components/Toggle/Toggle";
 import Domino from "./components/graphic-elements/Domino/Domino";
 import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimation/StaggeringAnimation";
 import HexDisplay from "./components/HexDisplay/HexDisplay";
-import FormText from "./components/graphic-elements/FormText.js/FormText";
 import VerticalMarquee from "./components/graphic-elements/VerticalMarquee/VerticalMarquee";
 import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircle";
 
 function App() {
-	// saying we want to use the varieble mixColors from context
+	// saying we want to use the varieble color etc from context
 	const { mixColors, BW, setBW, invert, setInvert } = useContext(Context);
 
+	//relod the page make the scroll go up
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -29,6 +29,8 @@ function App() {
 		<main>
 			<Header />
 			<Button />
+
+			{/* _________________________________SECTION_1____________________________________________ */}
 			<section id="section1" className="site-section section1">
 				<div className="section1__text-wrapper">
 					<h1 className="section1__main-title">COLOR ME TWICE</h1>
@@ -43,7 +45,7 @@ function App() {
 						<span>
 							<span className="bold">
 								How you do it, it's easy as 1, 2, 3.
-							</span>{" "}
+							</span>
 							<br />
 							<span className="bold">1:</span> Press start
 							<br /> <span className="bold">2:</span> Choose your colors
@@ -52,41 +54,29 @@ function App() {
 						</span>
 					</p>
 				</div>
-
 				<CircleText />
 			</section>
 
+			{/* _________________________________SECTION_2____________________________________________ */}
 			<section id="section2" className="site-section section2">
 				<ColorBox color={mixColors.one} />
 				<PlusSign />
 				<ColorBox color={mixColors.two} />
 			</section>
 
+			{/* _________________________________SECTION_3____________________________________________ */}
 			<section id="section3" className="site-section section3">
-				{/* <StarFlower /> */}
 				<VerticalMarquee />
 				<HexDisplay className={"primary-hex-display"} />
 				<HexDisplay className={"accent-hex-display"} />
 				<div className="toggles">
-					<div>
-						<p>B / W</p>
-						<Toggle value={BW} setValue={setBW} />
-					</div>
-
-					<div>
-						<p>SWITCH</p>
-						<Toggle value={invert} setValue={setInvert} />
-					</div>
+					<Toggle value={BW} setValue={setBW} text={"B / W"} />
+					<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
 				</div>
 				<div className="phone-domino">
 					<Domino />
 				</div>
-
-				<div className="title-textAI">
-					<h1>YOU COLORED ME TWICE!</h1>
-					<br />
-					<ParagraphAPI />
-				</div>
+				<ParagraphAPI />
 				<StaggeringAnimation />
 				<FollowCircle />
 			</section>

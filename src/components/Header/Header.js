@@ -10,7 +10,7 @@ function Header() {
             <motion.div
             drag
             dragConstraints={{
-                right: 200,
+                right: 0,
                 left: -5,
                 top: 3,
                 bottom:3
