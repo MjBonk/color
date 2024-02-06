@@ -3,7 +3,6 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	height: 100%;
 	overflow: hidden;
 }
 
@@ -23,16 +22,16 @@
 }
 
 .small {
-	width: 20px;
-	height: 20px;
+	width: 23px;
+	height: 23px;
 }
 
 .square {
 	pointer-events: none;
 	position: relative;
-	height: 40px;
 	background-color: var(--clr-accent);
 	font-size: 14px;
+	margin: 1px;
 }
 
 /* 100 - 85 - 65 - 45 - 25 */
