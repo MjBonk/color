@@ -1,7 +1,7 @@
 .main-button {
 	font-family: var(--ff-rubic);
 	position: fixed;
-	bottom: .5rem;
+	bottom: 10px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: all .5s ease-in-out;
@@ -11,6 +11,6 @@
 
 @media (max-width: 800px) {
 	.main-button{
-		bottom: .2rem;
+		bottom: 0px;
 	}
 }

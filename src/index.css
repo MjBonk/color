@@ -1,24 +1,7 @@
 @font-face {
-  font-family: MNFR;
-  src: url("./assets/MesloLGS\ NF\ Regular.ttf") format("truetype");
-}
-@font-face {
   font-family: RR;
   src: url("./assets/Righteous-Regular.ttf") format("truetype");
 }
-@font-face {
-  font-family: Mantranaga;
-  src: url("./assets/Mantranaga36Daysoftype2023.ttf") format("truetype");
-}
-@font-face {
-  font-family: Alinsa;
-  src: url("./assets/Alinsa.ttf") format("truetype");
-}
-@font-face {
-  font-family: COLA;
-  src: url("./assets/ColaDemo.otf") format("truetype");
-}
-
 
 
 :root {
@@ -83,6 +66,11 @@ h1 {
 
 p {
   font-family: var(--ff-montserrat);
+  font-weight: 400;
+}
+
+.bold{
+  font-weight: 800;
 }
 
 /* Media queries for standard breakpoints */

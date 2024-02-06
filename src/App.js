@@ -41,10 +41,14 @@ function App() {
 						<br />
 						<br />
 						<span>
-							How you do it, it's easy as 1, 2, 3. <br />
-							1: Press start
-							<br /> 2: Choose your colors
-							<br /> 3: Press mix and see the result
+							<span className="bold">
+								How you do it, it's easy as 1, 2, 3.
+							</span>{" "}
+							<br />
+							<span className="bold">1:</span> Press start
+							<br /> <span className="bold">2:</span> Choose your colors
+							<br /> <span className="bold">3:</span> Press mix and see the
+							result
 						</span>
 					</p>
 				</div>

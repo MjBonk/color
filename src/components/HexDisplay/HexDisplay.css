@@ -87,7 +87,8 @@
 	}
 
 	.accent-hex-display {
-		grid-area: 7 / 1 / 11 / 6;
+		grid-area: 6 / 1 / 10 / 6;
+		;
 	}
 
 	.hex-domino {
@@ -106,6 +107,7 @@
 	.primary-hex-display>h1 {
 		font-size: 3rem;
 	}
+
 	.accent-hex-display>p,
 	.primary-hex-display>p {
 		font-size: 1rem;
